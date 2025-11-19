@@ -1,0 +1,39 @@
+@CongestionTaxCalculator.API_HostAddress = http://localhost:5275
+
+### Calculate Tax
+POST {{CongestionTaxCalculator.API_HostAddress}}/api/tax/calculate
+Content-Type: application/json
+
+{
+  "vehicleType": "Car",
+  "dates": [
+    "2013-02-08T06:00:00",
+    "2013-02-08T07:00:00"
+  ],
+  "cityCode": "GOT"
+}
+
+### Add City
+POST {{CongestionTaxCalculator.API_HostAddress}}/api/cities
+Content-Type: application/json
+
+{
+  "name": "Sample City",
+  "code": "SMP",
+  "maxDailyTax": 60,
+  "singleChargeMinutes": 60,
+  "isActive": true,
+  "taxRules": [
+    {
+      "startTime": "06:00:00",
+      "endTime": "06:30:00",
+      "amount": 8,
+      "priority": 1
+    }
+  ]
+}
+
+### Delete City
+DELETE {{CongestionTaxCalculator.API_HostAddress}}/api/cities/SMP
+
+
