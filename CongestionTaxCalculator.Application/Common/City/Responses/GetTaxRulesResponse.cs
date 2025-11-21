@@ -1,4 +1,5 @@
 ﻿namespace CongestionTaxCalculator.Application.Common.City.Responses;
+using CongestionTaxCalculator.Application.Common.City.Dtos;
 
 public class GetTaxRulesResponse
 {
