@@ -2,6 +2,7 @@ using MediatR;
 using CongestionTaxCalculator.Application.Interfaces;
 using CongestionTaxCalculator.Domain.Entities;
 using CongestionTaxCalculator.Application.Common.City.Responses;
+using CongestionTaxCalculator.Application.Common.City.Dtos;
 
 namespace CongestionTaxCalculator.Application.TaxHandlers.GetTaxRules;
 
